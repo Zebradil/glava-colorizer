@@ -11,15 +11,15 @@ Glove-colorizer is an attempt to change colors of the glove depending on the cur
 
 ** Usage:
 
-```shell
+#+begin_src shell
 bash doh.sh
-```
+#+end_src
 
 Curretly, it's total garbage, the same effect can be achieved by using the following snippet:
 
-```shell
+#+begin_src shell
 while true; do
     echo \#$(head -c 256 /dev/urandom | md5sum | cut -c 1-6)
     sleep 1
 done | glava --stdin
-```
+#+end_src
