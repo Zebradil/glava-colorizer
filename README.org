@@ -1,0 +1,25 @@
+#+title: glove-colorizer readme
+#+author: German Lashevich
+
+* Glove-colorizer
+
+Glove-colorizer is an attempt to change colors of the glove depending on the currently playng song.
+
+** Requirements:
+- Python 3.6
+- bash
+
+** Usage:
+
+```shell
+bash doh.sh
+```
+
+Curretly, it's total garbage, the same effect can be achieved by using the following snippet:
+
+```shell
+while true; do
+    echo \#$(head -c 256 /dev/urandom | md5sum | cut -c 1-6)
+    sleep 1
+done | glava --stdin
+```
